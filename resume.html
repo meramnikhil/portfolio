@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meram Nikhil Yadav - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --dark: #0f172a;
+      --text: #334155;
+      --light-bg: #f8fafc;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, sans-serif;
+      background: #0f172a;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .top-actions {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-actions a, .top-actions button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .print-btn {
+      background: #38bdf8;
+      color: #020617;
+      border: none;
+    }
+
+    .print-btn:hover {
+      background: #7dd3fc;
+    }
+
+    .resume-sheet {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .resume-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .resume-header h1 {
+      font-size: 2.2rem;
+      color: var(--dark);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .resume-contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .resume-contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .resume-location {
+      color: #64748b;
+      font-size: 0.88rem;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1.5px solid #e0f2fe;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .summary-text {
+      color: #475569;
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      font-size: 0.92rem;
+    }
+
+    .skills-grid p strong {
+      color: var(--dark);
+      min-width: 140px;
+      display: inline-block;
+    }
+
+    .edu-item, .project-item {
+      margin-bottom: 16px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .item-date {
+      font-size: 0.88rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .item-sub {
+      font-size: 0.92rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .project-role {
+      font-size: 0.88rem;
+      color: #475569;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .bullet-list {
+      padding-left: 20px;
+      color: #475569;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    .declaration {
+      margin-top: 30px;
+      border-top: 1px dashed var(--border);
+      padding-top: 16px;
+      font-size: 0.88rem;
+      color: #64748b;
+    }
+
+    .dec-sign {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .top-actions {
+        display: none !important;
+      }
+      .resume-sheet {
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0;
+      }
+      @page {
+        margin: 15mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-actions">
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    <button onclick="window.print()" class="print-btn"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+  </div>
+
+  <main class="resume-sheet">
+    <header class="resume-header">
+      <h1>MERAM NIKHIL YADAV</h1>
+      <div class="resume-contact">
+        <span><i class="fa-solid fa-phone"></i> +91 8897406105</span>
+        <span>•</span>
+        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:meram.nikhil@gmail.com">meram.nikhil@gmail.com</a></span>
+        <span>•</span>
+        <span><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/meram-nikhil-66518732a/" target="_blank">linkedin.com/in/meram-nikhil-66518732a</a></span>
+      </div>
+      <p class="resume-location"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana, India - 501301</p>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Enthusiastic and customer-focused fresher seeking a Customer Support / Call Centre Executive role. Strong verbal and written communication skills in English, Hindi, and Telugu. Quick learner with a positive attitude, patience, and a genuine desire to help customers. Able to handle customer queries calmly and professionally with strong problem-solving and technical ability from a Computer Science background.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Key Skills</h2>
+      <div class="skills-grid">
+        <p><strong>Communication:</strong> Fluent in English, Hindi, and Telugu — verbal and written; Active listening</p>
+        <p><strong>Customer Handling:</strong> Query resolution, complaint handling, customer satisfaction (CSAT), de-escalation</p>
+        <p><strong>Computer Skills:</strong> MS Office (Excel, Word, PowerPoint), Email etiquette, Data Entry & Typing</p>
+        <p><strong>Technical Foundation:</strong> CSE (Data Science), Database validation, Data integrity checks</p>
+        <p><strong>Soft Skills:</strong> Patient, empathetic, calm under pressure, quick learner, team player, multitasking</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">B.Tech - Computer Science Engineering (Data Science)</span>
+          <span class="item-date">2022 – Present</span>
+        </div>
+        <p class="item-sub">ACE Engineering College, Hyderabad</p>
+        <p class="summary-text"><strong>CGPA:</strong> 8.29 / 10</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+      
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Online Voting System</span>
+          <span class="item-date">Jan 2025 – Jun 2025</span>
+        </div>
+        <p class="project-role"><strong>Role:</strong> Team Coordinator & Developer | <strong>Team Size:</strong> 4</p>
+        <ul class="bullet-list">
+          <li>Coordinated with team members and managed smooth communication throughout the project.</li>
+          <li>Handled user feedback and resolved issues quickly, ensuring a positive user experience.</li>
+          <li>Presented project to non-technical audiences by explaining concepts in simple, clear language.</li>
+          <li>Ensured 100% accuracy in data by implementing quality checks and validation.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Intelligent Study Space Allocation System</span>
+          <span class="item-date">Jan 2026</span>
+        </div>
+        <p class="project-role"><strong>Role:</strong> Developer & User Support | <strong>Team Size:</strong> 4</p>
+        <ul class="bullet-list">
+          <li>Designed a user-friendly system focused on improving student experience.</li>
+          <li>Handled real-time issues and resolved them promptly for end users.</li>
+          <li>Communicated with team members effectively to deliver the project on time.</li>
+          <li>Improved overall system efficiency by 40% through continuous feedback and improvements.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Strengths</h2>
+      <ul class="bullet-list">
+        <li>Good verbal and written communication in English, Hindi, and Telugu.</li>
+        <li>Patient, calm, and empathetic — handles pressure well.</li>
+        <li>Quick learner — adapts to new tools and processes fast.</li>
+        <li>Positive attitude with a genuine desire to help people.</li>
+        <li>Strong problem-solving and multitasking ability.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Hobbies & Interests</h2>
+      <ul class="bullet-list">
+        <li>Traveling and exploring new places.</li>
+        <li>Gaming and reading.</li>
+        <li>Strength training and fitness.</li>
+      </ul>
+    </section>
+
+    <footer class="declaration">
+      <p>I hereby declare that the above-mentioned details are true and correct to the best of my knowledge.</p>
+      <div class="dec-sign">
+        <span><strong>Place:</strong> Hyderabad</span>
+        <span>(Meram Nikhil Yadav)</span>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
