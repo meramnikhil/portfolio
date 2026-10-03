@@ -1,10 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meram Nikhil Yadav - Data Engineer Resume</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
     <style>
         * {
@@ -15,18 +16,64 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f2f2f2;
+            background: #0f172a;
             color: #222;
             line-height: 1.45;
+            padding: 20px 10px;
+        }
+
+        .top-bar {
+            width: 210mm;
+            max-width: 100%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.12);
+            color: #f1f5f9;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .print-btn {
+            background: #38bdf8;
+            color: #020617;
+            border: none;
+        }
+
+        .print-btn:hover {
+            background: #7dd3fc;
         }
 
         .resume {
             width: 210mm;
+            max-width: 100%;
             min-height: 297mm;
-            margin: 25px auto;
+            margin: 0 auto 30px auto;
             background: white;
-            padding: 18mm 17mm;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+            padding: 16mm 17mm;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
         }
 
         /* Header */
@@ -36,20 +83,21 @@
         }
 
         .name {
-            font-size: 27px;
+            font-size: 26px;
             font-weight: 700;
             letter-spacing: 0.5px;
             margin-bottom: 5px;
+            color: #111;
         }
 
         .contact {
-            font-size: 11px;
+            font-size: 11.5px;
             color: #333;
             line-height: 1.7;
         }
 
         .contact a {
-            color: #222;
+            color: #0284c7;
             text-decoration: none;
         }
 
@@ -63,34 +111,43 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.7px;
-            border-bottom: 1.5px solid #333;
+            border-bottom: 1.5px solid #222;
             padding-bottom: 3px;
             margin-bottom: 7px;
+            color: #111;
         }
 
         .summary {
-            font-size: 10.5px;
+            font-size: 10.8px;
             text-align: justify;
+            color: #333;
+            line-height: 1.5;
         }
 
         /* Skills */
         .skill-row {
-            font-size: 10px;
+            font-size: 10.5px;
             margin-bottom: 4px;
+            color: #333;
+            line-height: 1.45;
         }
 
         .skill-title {
             font-weight: 700;
+            color: #111;
         }
 
         /* Education */
         .education-title {
-            font-size: 10.5px;
+            font-size: 11px;
             font-weight: 700;
+            color: #111;
         }
 
         .education-details {
-            font-size: 10px;
+            font-size: 10.5px;
+            color: #444;
+            margin-top: 2px;
         }
 
         /* Projects */
@@ -99,30 +156,39 @@
         }
 
         .project-title {
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 700;
             margin-bottom: 2px;
+            color: #111;
         }
 
         .project-tech {
-            font-size: 9.5px;
-            margin-bottom: 3px;
-            color: #333;
+            font-size: 10px;
+            margin-bottom: 4px;
+            color: #444;
+            font-style: italic;
         }
 
         ul {
-            padding-left: 17px;
+            padding-left: 18px;
         }
 
         li {
-            font-size: 9.8px;
-            margin-bottom: 2px;
+            font-size: 10.2px;
+            margin-bottom: 2.5px;
+            color: #333;
+            line-height: 1.45;
         }
 
         /* Print */
         @media print {
             body {
                 background: white;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none !important;
             }
 
             .resume {
@@ -131,6 +197,7 @@
                 margin: 0;
                 padding: 12mm 14mm;
                 box-shadow: none;
+                border-radius: 0;
             }
 
             a {
@@ -147,6 +214,11 @@
 </head>
 
 <body>
+
+<div class="top-bar no-print">
+    <a href="index.html" class="top-btn back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    <button onclick="window.print()" class="top-btn print-btn"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+</div>
 
 <div class="resume">
 
@@ -392,4 +464,3 @@
 
 </body>
 </html>
-```
