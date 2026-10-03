@@ -24,33 +24,32 @@ Inspired by the dark-mode aesthetic of Haripriya's portfolio with glowing cyan a
 
 ## 🚀 How to Host on GitHub Pages (Recommended)
 
-To get a live link like `https://<your-github-username>.github.io/portfolio/`:
+To get your live link at `https://meramnikhil.github.io/portfolio/`:
 
 ### Step 1: Create a GitHub Repository
-1. Log in to [GitHub](https://github.com/).
+1. Log in to your GitHub account: [github.com/meramnikhil](https://github.com/meramnikhil).
 2. Click **New Repository** (or visit [github.com/new](https://github.com/new)).
 3. Repository name: `portfolio` (or `Portfolio`).
 4. Set visibility to **Public**.
-5. Do **not** initialize with README or .gitignore (we already have them). Click **Create repository**.
+5. Do **not** check "Add a README file" or .gitignore.
+6. Click **Create repository**.
 
 ### Step 2: Push Your Code
-Open PowerShell or your terminal in this directory (`C:\Users\meram\.gemini\antigravity\scratch\nikhil-portfolio`) and run:
+Open PowerShell and run these commands:
 
 ```bash
-git add .
-git commit -m "Initial commit: Nikhil Yadav portfolio"
-git remote add origin https://github.com/<your-username>/portfolio.git
+cd C:\Users\meram\.gemini\antigravity\scratch\nikhil-portfolio
+git remote add origin https://github.com/meramnikhil/portfolio.git
 git branch -M main
 git push -u origin main
 ```
-*(Replace `<your-username>` with your actual GitHub username)*
 
 ### Step 3: Enable GitHub Pages
-1. On GitHub, open your repository and go to **Settings** > **Pages** (in the left sidebar).
+1. In your GitHub repository, click **Settings** > **Pages** (on the left menu).
 2. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
 3. Under **Branch**, select `main` and `/ (root)`, then click **Save**.
-4. Within 1-2 minutes, your website will be live at:
-   `https://<your-username>.github.io/portfolio/`
+4. In 1–2 minutes, your website will be live at:
+   👉 **https://meramnikhil.github.io/portfolio/**
 
 ---
 
